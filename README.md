@@ -1,4 +1,4 @@
-###### Awesome-Application-Security-Checklist
+# Awesome-Application-Security-Checklist
   If you are designing, creating, testing  your web/mobile application with security in mind, this Checklist of counter-measures can be a good starting point 
 
 
