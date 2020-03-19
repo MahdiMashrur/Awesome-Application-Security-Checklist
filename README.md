@@ -69,6 +69,10 @@
 - [ ] Sanitize inputs that take some sort of URLs to prevent [SSRF](https://docs.google.com/document/d/1v1TkWZtrhzRLy0bYXBcdLUedXGb9njTNIJXa3u9akHM/edit#heading=h.t4tsk5ixehdd).
 - [ ] Sanitize Outputs before displaying to users.
 
+##### Denial of Service Protection
+- [ ] Make sure that DOS attacks on your APIs won’t cripple your site. At a minimum, have rate limiters on your slower API paths like login and token generation routines. Consider CAPTCHA on front-end APIs to protect back-end services against DOS.
+- [ ] Enforce sanity limits on the size and structure of user submitted data and requests.
+- [ ] Use Distributed Denial of Service (DDOS) mitigation via a global caching proxy service like CloudFlare. This can be turned on if you suffer a DDOS attack and otherwise function as your DNS lookup.
 
 ##### OPERATIONS
 - [ ] If you are small and inexperienced, evaluate using AWS elasticbeanstalk or a PaaS to run your code.
