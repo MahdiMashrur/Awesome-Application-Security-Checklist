@@ -77,3 +77,13 @@
 - [ ] Be prepared for bad actors & DDOS - use a hosting service that has DDOS mitigation.
 - [ ] Set up monitoring for your systems, and log stuff (use [New Relic](https://newrelic.com/) or something like that).
 - [ ] If developing for enterprise customers, adhere to compliance requirements. If AWS S3, consider using the feature to [encrypt data](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html). If using AWS EC2, consider using the feature to use encrypted volumes (even boot volumes can be encrypted now).
+
+
+
+##### PEOPLE
+- [ ] Set up an email (e.g. security@coolcorp.io) and a page for security researchers to report vulnerabilities.
+- [ ] Depending on what you are making, limit access to your user databases.
+- [ ] Be polite to bug reporters.
+- [ ] Have your code review done by a fellow developer from a secure coding perspective. (More eyes)
+- [ ] In case of a hack or data breach, check previous logs for data access, ask people to change passwords. You might require an audit by external agencies depending on where you are incorporated.  
+- [ ] Set up [Netflix's Scumblr](https://github.com/Netflix/Scumblr) to hear about talks about your organization on social platforms and Google search.
