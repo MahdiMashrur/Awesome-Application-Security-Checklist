@@ -63,3 +63,17 @@
 - [ ] Do not hand code or build JSON by string concatenation ever, no matter how small the object is. Use your language defined libraries or framework.
 - [ ] Sanitize inputs that take some sort of URLs to prevent [SSRF](https://docs.google.com/document/d/1v1TkWZtrhzRLy0bYXBcdLUedXGb9njTNIJXa3u9akHM/edit#heading=h.t4tsk5ixehdd).
 - [ ] Sanitize Outputs before displaying to users.
+
+
+##### OPERATIONS
+- [ ] If you are small and inexperienced, evaluate using AWS elasticbeanstalk or a PaaS to run your code.
+- [ ] Use a decent provisioning script to create VMs in the cloud.
+- [ ] Check for machines with unwanted publicly `open ports`.
+- [ ] Check for no/default passwords for `databases` especially MongoDB & Redis.
+- [ ] Use SSH to access your machines; do not setup a password, use SSH key-based authentication instead.
+- [ ] Install updates timely to act upon zero day vulnerabilities like Heartbleed, Shellshock.
+- [ ] Modify server config to use TLS 1.2 for HTTPS and disable all other schemes. (The tradeoff is good.)
+- [ ] Do not leave the DEBUG mode on. In some frameworks, DEBUG mode can give access full-fledged REPL or shells or expose critical data in error messages stacktraces.
+- [ ] Be prepared for bad actors & DDOS - use a hosting service that has DDOS mitigation.
+- [ ] Set up monitoring for your systems, and log stuff (use [New Relic](https://newrelic.com/) or something like that).
+- [ ] If developing for enterprise customers, adhere to compliance requirements. If AWS S3, consider using the feature to [encrypt data](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html). If using AWS EC2, consider using the feature to use encrypted volumes (even boot volumes can be encrypted now).
