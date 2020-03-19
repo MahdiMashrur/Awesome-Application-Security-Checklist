@@ -80,6 +80,14 @@
 
 
 
+CI & CD
+ Audit your design and implementation with unit/integration tests coverage.
+ Use a code review process and disregard self-approval.
+ Ensure that all components of your services are statically scanned by AV software before pushing to production, including vendor libraries and other dependencies.
+ Design a rollback solution for deployments.
+
+
+
 ##### PEOPLE
 - [ ] Set up an email (e.g. security@coolcorp.io) and a page for security researchers to report vulnerabilities.
 - [ ] Depending on what you are making, limit access to your user databases.
@@ -87,3 +95,4 @@
 - [ ] Have your code review done by a fellow developer from a secure coding perspective. (More eyes)
 - [ ] In case of a hack or data breach, check previous logs for data access, ask people to change passwords. You might require an audit by external agencies depending on where you are incorporated.  
 - [ ] Set up [Netflix's Scumblr](https://github.com/Netflix/Scumblr) to hear about talks about your organization on social platforms and Google search.
+
