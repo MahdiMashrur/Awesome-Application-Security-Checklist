@@ -87,7 +87,15 @@
 - [ ] Set up monitoring for your systems, and log stuff (use [New Relic](https://newrelic.com/) or something like that).
 - [ ] If developing for enterprise customers, adhere to compliance requirements. If AWS S3, consider using the feature to [encrypt data](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html). If using AWS EC2, consider using the feature to use encrypted volumes (even boot volumes can be encrypted now).
 
-
+##### Cloud Configuration
+ - [ ] Ensure all services have minimum ports open. While security through obscurity is no protection, using non-standard ports will make it a little bit harder for attackers.
+ - [ ] Host backend database and services on private VPCs that are not visible on any public network. Be very careful when configuring AWS security groups and peering VPCs which can inadvertently make services visible to the public.
+  - [ ] Isolate logical services in separate VPCs and peer VPCs to provide inter-service communication.
+  - [ ] Ensure all services only accept data from a minimal set of IP addresses.
+  - [ ] Restrict outgoing IP and port traffic to minimize APTs and “botification”.
+  - [ ] Always use AWS IAM roles and not root credentials.
+  - [ ] Use minimal access privilege for all ops and developer staff.
+  - [ ] Regularly rotate passwords and access keys according to a schedule.
 
 CI & CD
  Audit your design and implementation with unit/integration tests coverage.
